@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/5e9cfaad5b.js" crossorigin="anonymous"></script>
+   <style>
+body{
+
+    background: url('1.jpeg')no-repeat center ;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    /* height: 97vh;
+    width:98vw ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1000px;
+    margin-top: 420px;
+
+    
+}
+.main{
+    width: 450px;
+    height: 300px;
+border: 5px solid rgb(243, 248, 246);
+border-radius: 40px;
+}
+h1{
+    color: white;
+    font-size: 50px;
+    text-shadow: 5px -2px 4px rgba(220, 136, 10, 0.751);
+    margin: 25px 75px;
+ 
+    
+
+}
+.div{
+   height: 80px;
+   width: 120px;
+  
+
+}
+#icon1{
+    font-size: 140px;
+    margin: 10px 180px;
+    color: white;
+}
+
+   </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Thermometer</h1>
+        <div class="div">
+            <i class="fa-sharp fa-solid fa-temperature-empty" id="icon1"></i>
+        
+
+
+        </div>
+
+    
+       
+    </div>
+   <script>
+    const icon=document.getElementById('icon1');
+    function empty(){
+        icon.style.color="white";
+        icon.className="fa-sharp fa-solid fa-temperature-empty"
+
+    }
+    function quarter(){
+       
+        icon.className="fa-sharp fa-solid fa-temperature-quarter";
+
+    }
+    function half(){
+
+        icon.className="fa-sharp fa-solid fa-temperature-half";
+
+    }
+    function full(){
+        icon.className="fa-sharp fa-solid fa-temperature-full";
+        icon.style.color="red";
+
+    }
+    function main(){
+        setTimeout(empty,0);
+        setTimeout(quarter,1000);
+        setTimeout(half,2000);
+        setTimeout(full,3000);
+
+        
+    }
+    main();
+    setInterval(main,4000)
+
+
+   </script>
+</body>
+</html>
